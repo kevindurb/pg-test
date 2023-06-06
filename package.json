@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "concurrently npm:start:api npm:start:database",
+    "start:api": "nodemon",
+    "start:database": "docker-compose up database",
     "pgtyped": "pgtyped -w -c ./pgtyped.json"
   },
   "repository": {
@@ -19,9 +22,47 @@
   "homepage": "https://github.com/kevindurb/pg-test#readme",
   "devDependencies": {
     "@pgtyped/cli": "^2.2.1",
+    "@tsconfig/node18-strictest": "^1.0.0",
+    "@tsconfig/node18-strictest-esm": "^1.0.1",
+    "@types/bcrypt": "^5.0.0",
+    "@types/body-parser": "^1.19.2",
+    "@types/convert-units": "^2.3.5",
+    "@types/express": "^4.17.15",
+    "@types/jest": "^29.2.5",
+    "@types/node": "^18.11.18",
+    "@types/pg": "^8.10.2",
+    "@types/supertest": "^2.0.12",
+    "@types/uuid": "^9.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.59.9",
+    "@typescript-eslint/parser": "^5.59.9",
+    "concurrently": "^8.1.0",
+    "eslint": "^8.42.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-simple-import-sort": "^9.0.0",
+    "eslint-plugin-sort-class-members": "^1.16.0",
+    "jest": "^29.3.1",
+    "nodemon": "^2.0.22",
+    "prettier": "^2.8.1",
+    "supertest": "^6.3.3",
+    "ts-jest": "^29.0.4",
     "typescript": "^5.1.3"
   },
   "dependencies": {
-    "@pgtyped/runtime": "^2.1.0"
+    "@pgtyped/runtime": "^2.1.0",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "graphql": "^16.6.0",
+    "graphql-http": "^1.19.0",
+    "graphql-request": "^5.1.0",
+    "graphql-scalars": "^1.20.1",
+    "graphql-tag": "^2.12.6",
+    "pg": "^8.11.0",
+    "reflect-metadata": "^0.1.13",
+    "ts-loader": "^9.4.2",
+    "ts-node": "^10.9.1",
+    "type-graphql": "^2.0.0-beta.2",
+    "typedi": "^0.10.0"
   }
 }

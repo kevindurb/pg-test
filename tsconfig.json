@@ -1,0 +1,14 @@
+{
+  "extends": "@tsconfig/node18-strictest/tsconfig.json",
+  "compilerOptions": {
+    "exactOptionalPropertyTypes": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "strictPropertyInitialization": false,
+    "esModuleInterop": true,
+    "importsNotUsedAsValues": "preserve",
+    "outDir": "./dist"
+  },
+  "include": ["./src"],
+  "exclude": ["./dist"]
+}

@@ -1,4 +1,4 @@
-/** Types generated for queries found in "src/queries/getAllPeople.sql" */
+/** Types generated for queries found in "src/queries/people.sql" */
 import { PreparedQuery } from '@pgtyped/runtime';
 
 /** 'GetAllPeople' parameters type */
