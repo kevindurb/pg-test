@@ -1,0 +1,10 @@
+#! /bin/bash
+export PGHOST=database
+export PGUSER=postgres
+export PGPASSWORD=password
+
+psql < ./00-create-database.sql
+
+export PGDATABASE=pgtest
+
+psql < ./01-people.sql

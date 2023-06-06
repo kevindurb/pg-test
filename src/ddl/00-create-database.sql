@@ -1,0 +1,3 @@
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp"; -- noqa: RF05
+
+CREATE DATABASE pgtest;
